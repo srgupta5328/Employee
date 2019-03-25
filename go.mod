@@ -1,4 +1,4 @@
-module sandbox/Employee
+module github.com/srgupta5328/Employee
 
 go 1.12
 
