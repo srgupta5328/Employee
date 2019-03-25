@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: employee
+  labels:
+    app: employee
+spec:
+  ports:
+  - port: 8934
+    targetPort: http-server
+  selector:
+    app: employee
+  type: NodePort

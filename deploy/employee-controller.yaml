@@ -1,0 +1,22 @@
+---
+kind: ReplicationController
+apiVersion: v1
+metadata:
+  name: employee
+  labels:
+    app: employee
+spec:
+  replicas: 3
+  selector:
+    app: employee
+  template:
+    metadata:
+      labels:
+        app: employee
+    spec:
+      containers:
+      - name: employee
+        image: srgupta5328/employee:v.0.2
+        ports:
+        - name: http-server
+          containerPort: 8934
