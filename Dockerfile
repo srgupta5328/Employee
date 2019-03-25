@@ -4,11 +4,6 @@ FROM golang:latest
 
 # Copy the local package files to the container's workspace.
 ADD . /go/src/github.com/srgupta5328/Employee
-RUN export GO11MODULES=on
-COPY go.mod ./Employee
-COPY go.sum ./Employee
-
- RUN go mod tidy
 
 # Build the outyet command inside the container.
 # (You may fetch or manage dependencies here,
